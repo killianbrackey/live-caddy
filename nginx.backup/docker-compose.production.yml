@@ -18,6 +18,6 @@ services:
             - ./compose/lencrypt/well-known:/var/www/letsencrypt/
             - ./compose/lencrypt/config:/etc/letsencrypt
 
-    seankilgarriff.com:
+    killianbrackey.com:
         expose:
             -   8080

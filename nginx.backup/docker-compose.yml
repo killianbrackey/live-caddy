@@ -1,9 +1,9 @@
 version: '2'
 services:
-    seankilgarriff.com:
+    killianbrackey.com:
         image: skilgarriff/alpine-nginx
         volumes:
-            - ./seankilgarriff.com/public:/var/www/html:ro
+            - ./killianbrackey.com/public:/var/www/html:ro
         networks:
             - frontend
 networks:
