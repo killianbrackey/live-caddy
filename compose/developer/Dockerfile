@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:edge
 
 #Copy over, and grant executable permission to the startup script
 COPY ./entrypoint.sh /
