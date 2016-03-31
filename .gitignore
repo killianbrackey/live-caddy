@@ -2,7 +2,7 @@
 #No node Modules for us
 node_modules
 #Ignore our public directory as it can just simply be built on dev container startup
-public
+#public
 
 #Lets Encrpy and Proxy ignores
 dhparam4096.pem
