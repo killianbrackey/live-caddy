@@ -1,10 +1,4 @@
-0.0.0.0:80 {
-  log stdout
-  errors stderr
-  redir https://killianbrackey.com{uri} 301
-}
-
-killianbrackey.com {
+killianbrackey.com, www.killianbrackey.com {
 
 			proxy / killianbrackey.com:80
 
