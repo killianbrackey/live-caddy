@@ -76,7 +76,8 @@ var uglify = require('gulp-uglify');
 //Browsersync
 var browserSync = require("browser-sync").create();
 
-
+//Plumber
+//var plumber = require('gulp-plumber');
 
 /*
 *
@@ -130,6 +131,7 @@ gulp.task('sitemap', function () {
 */
 gulp.task('sass', function () {
     return gulp.src(paths.styles.input)
+        //.pipe(customPlumber())
         .pipe(sass({
             includePaths: [].concat(bourbon, neat)
         }))
@@ -141,6 +143,19 @@ gulp.task('sass', function () {
             stream: true
         }));
 });
+
+
+// Custom Plumber function
+/*
+function customPlumber() {
+  return plumber({
+    errorHandler: function(err) {
+      console.log(err.stack);
+      this.emit('end');
+    }
+  })
+}
+*/
 
 /*
 *
