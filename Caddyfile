@@ -4,6 +4,8 @@ killianbrackey.com {
 
 	proxy / killianbrackey.com:80
 	gzip
+
+	tls killianbrackey@zzrot.com
 }
 
 www.killianbrackey.com {
@@ -16,4 +18,6 @@ calc.killianbrackey.com {
 
 		proxy / calc.killianbrackey.com:3000
 		gzip
+
+		tls killianbrackey@zzrot.com
 }
