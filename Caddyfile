@@ -10,8 +10,22 @@ www.killianbrackey.com {
 
 }
 
+killianbrackey.com {
+	root
+	proxy / killianbrackey.com:80
+	gzip
+}
+
+www.killianbrackey.com {
+
+	redir https://killianbrackey.com
+
+}
+
 calc.killianbrackey.com {
 
 		proxy / calc.killianbrackey.com:3000
 		gzip
 }
+
+localhost:
