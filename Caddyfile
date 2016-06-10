@@ -1,9 +1,17 @@
-0.0.0.0:80
+killianbrackey.com {
 
-root /var/www/html
+	proxy / killianbrackey.com:80
+	gzip
+}
+
+www.killianbrackey.com {
+
+	redir https://killianbrackey.com
+
+}
 
 calc.killianbrackey.com {
 
 		proxy / calc.killianbrackey.com:3000
-		
+		gzip
 }
