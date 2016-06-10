@@ -14,3 +14,7 @@ services:
     killianbrackey.com:
         expose:
             -   80
+
+    calc.killianbrackey.com:
+       expose:
+            -   3000
