@@ -36,7 +36,12 @@ function updateDisplay() {
 }
 
 socket.on('button', function(msg){
-    $('#history').append($('<li>').text(msg));
+    calc_history.push(msg);
+    if (calc_history.length > 10) {
+      calc_history.shift();
+      $('#history li').first().remove();
+    }
+      $('#history').append($('<li>').text(msg));
   });
 
 socket.on('history', function(history) {
@@ -189,6 +194,7 @@ $('#key-equate').click(function() {
 });
 
 $('#key-percent').click(function() {
+    equals=true;
     percent();
     calculate();
 });

@@ -5,11 +5,7 @@ var io = require('socket.io')(http);
 
 var history = [];
 
-
 app.use(express.static(__dirname + '/public'));
-// app.get('/', function(req, res){
-//   res.sendFile(__dirname + '/public/calc.html');
-// });
 
 io.on('connection', function(socket){
   console.log('a user connected');
@@ -18,14 +14,13 @@ io.on('connection', function(socket){
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
-	socket.on('history', function(history) {
-		io.emit('history', history);
-		console.log("REACHED HISTORY HERE");
-	});
+
 	socket.on('button', function(msg){
-		console.log("button pressed");
 		io.emit('button', msg);
 		history.push(msg);
+		if (history.length > 10) {
+			history.shift();
+		}
 	});
 });
 
