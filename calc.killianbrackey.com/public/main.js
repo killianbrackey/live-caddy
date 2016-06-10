@@ -5,7 +5,6 @@ var maxLength = 24;
 var socket = io();
 var calc_history = [];
 var equals = false;
-var calculatePercent = false;
 
 var calcDisplay = document.getElementById('calc-display');
 var calcBelow = document.getElementById('calc-below');
