@@ -5,7 +5,7 @@ killianbrackey.com {
 	proxy / killianbrackey.com:80
 	gzip
 
-	tls example@email.com
+	tls killianbrackey@gmail.com
 }
 
 www.killianbrackey.com {
@@ -19,5 +19,5 @@ calc.killianbrackey.com {
 		proxy / calc.killianbrackey.com:3000
 		gzip
 
-		tls example@email.com
+		tls killianbrackey@gmail.com
 }
