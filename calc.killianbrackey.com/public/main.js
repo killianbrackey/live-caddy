@@ -41,7 +41,7 @@ socket.on('button', function(msg){
       calc_history.shift();
       $('#history li').first().remove();
     }
-      $('#history').append($('<li>').text(msg));
+      $('#history').append($('<li><h5>').text(msg));
   });
 
 socket.on('history', function(history) {
@@ -99,7 +99,6 @@ function calculate() {
     }
     summary += calcPending;
 
-    //socket.emit('button', calcTotal);
     if (equals === true) {
       socket.emit('button', summary);
       equals = false;

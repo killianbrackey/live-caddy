@@ -3,17 +3,17 @@
   <head>
     <title>Live Stream Calculator</title>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-		<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    		<!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    	<!-- Optional theme -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="./main.css">
+    	<!-- Latest compiled and minified JavaScript -->
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
 
   </head>
   <body>
@@ -120,7 +120,7 @@
 		              </div>
 		            </div>
 		          </div>
-		          <!-- Rigt 1 Column -->
+		          <!-- Right 1 Column -->
 		          <div class="col-xs-3">
 		            <!-- 1st Row -->
 		            <div class="row calc-row">
@@ -140,16 +140,16 @@
 		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-subtract">-</button>
 		              </div>
 		            </div>
-		            <!-- 4th & 5th row - tall 'plus' button -->
+		            <!-- 4th & 5th row  -->
 		            <button type="button" class="btn btn-block btn-tall btn-default btn-calc" id="key-add">+</button>
 		          </div>
 		        </div>
 		      </div>
 		    </div>
-        <div class="well text-centered history-container">
-          History
-          <div id="history">
-          </div>
+        <!-- history well -->
+        <div class="well history-container">
+            <h5>History</h5>
+            <div id="history"></div>
           </div>
         </div>
         </div>
@@ -159,18 +159,6 @@
 
 		<script src="/socket.io/socket.io.js"></script>
 
-			<script>
-			  var socket = io();
-			  $('a').on("click", function(){
-			    socket.emit('button', "CLICKED");
-			    $('data-key').val('');
-          console.log("Click logged");
-			    return false;
-			  });
-			  socket.on('button', function(data-key){
-			    $('#calc-history-list').append($('<li>').text(data-key));
-			  });
-			</script>
   </body>
   <script src="main.js"></script>
 </html>
