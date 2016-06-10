@@ -1,17 +1,9 @@
-killianbrackey.com {
+0.0.0.0:80
 
-	proxy / killianbrackey.com:80
-	gzip
-}
-
-www.killianbrackey.com {
-
-	redir https://killianbrackey.com
-
-}
+root /var/www/html
 
 killianbrackey.com {
-	root
+
 	proxy / killianbrackey.com:80
 	gzip
 }
@@ -27,5 +19,3 @@ calc.killianbrackey.com {
 		proxy / calc.killianbrackey.com:3000
 		gzip
 }
-
-localhost:
