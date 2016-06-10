@@ -5,6 +5,7 @@ var maxLength = 24;
 var socket = io();
 var calc_history = [];
 var equals = false;
+var calculatePercent = false;
 
 var calcDisplay = document.getElementById('calc-display');
 var calcBelow = document.getElementById('calc-below');
@@ -96,6 +97,8 @@ function calculate() {
         calcPending = parseFloat(calcTotal) * parseFloat(calcPending);
     } else if (operator === '/') {
         calcPending = parseFloat(calcTotal) / parseFloat(calcPending);
+    } else if (operator ==='%') {
+        calcPending = parseFloat(calcTotal) % parseFloat(calcPending);
     }
     summary += calcPending;
 
@@ -115,6 +118,8 @@ function calculate() {
 
 function percent() {
     calcPending = (calcPending * (calcTotal / 100));
+    calculatePercent = false;
+    socket.emit('button', calcPending);
 }
 
 // Events
@@ -187,13 +192,11 @@ $('#key-add').click(function() {
     appendOperator('+');
 });
 
-$('#key-equate').click(function() {
-    equals=true;
-    calculate();
+$('#key-percent').click(function() {
+    appendOperator('%');
 });
 
-$('#key-percent').click(function() {
+$('#key-equate').click(function() {
     equals=true;
-    percent();
     calculate();
 });
