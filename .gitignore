@@ -11,3 +11,4 @@ compose/lencrypt/config/csr
 compose/lencrypt/config/keys
 compose/lencrypt/config/live
 compose/lencrypt/config/renewal
+.caddy
