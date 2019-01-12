@@ -4,7 +4,7 @@
       image: zzrot/alpine-caddy
       volumes:
         -   ./Caddyfile:/etc/Caddyfile
-        -   ./killianbrackey.com/public:/var/www/html
+        -   ./killianbrackey.com/react/killianbrackey.com/build:/var/www/html
       networks:
         -   frontend
   networks:
