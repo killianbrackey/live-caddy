@@ -1,0 +1,16 @@
+{
+  "name": "brackey",
+  "description": "Live stream calculator",
+  "author": "Killian Brackey NAME killianbrackey@gmail.com",
+  "version": "0.0.1",
+  "dependencies": {
+    "connect": "^1.8.5",
+    "express": "^4.13.4",
+    "jade": "^0.20.0",
+    "mongoose": "^2.4.8",
+    "socket.io": "^1.4.6",
+		"underscore": "^1.8.3",
+		"ws": "^1.0.1"
+  },
+  "engine": "node >= 0.6.6"
+}

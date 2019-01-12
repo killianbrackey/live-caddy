@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Live Stream Calculator</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    		<!-- Latest compiled and minified CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    	<!-- Optional theme -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+    	<!-- Latest compiled and minified JavaScript -->
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
+
+  </head>
+  <body>
+
+		<div class="container">
+		  <div class="calc calc-body well well-lg">
+		    <!-- Calculator Text Heading -->
+		    <header>
+		      <div class="calc calc-head row">
+		        <div class="col-xs-8 col-xs-offset-2">
+		          <h2 class="text-center text-primary main-heading">Live Calculator</h2>
+		        </div>
+		      </div>
+		      <div class="calc-subhead row">
+		        <div class="col-xs-8 col-xs-offset-2">
+		          <h5 class="text-center text-muted"><i class="fa fa-calculator"></i>Use Responsibly</h5>
+		        </div>
+		      </div>
+		    </header>
+		    <!-- Calculator Output Display -->
+		    <div class="display">
+		      <div class="calc row">
+		        <div class="text-muted text-center calc-appear-box">
+		          <h3 class="calc-appear text-center" id="calc-appear"></h3>
+		        </div>
+		        <div class="col-xs-12">
+		          <div class="well text-right well-calc">
+		            <div class="row">
+		              <h3 class="calc-display"><span class="calc-output" id="calc-display"></span></h3>
+		            </div>
+		            <div class="row">
+		              <h6 class="text-muted calc-output calc-below" id="calc-below"></h6>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		    <!-- Calculator Buttons -->
+		    <div class="keys">
+		      <div class="calc calc-keys">
+		        <div class="row">
+		          <!-- Left 3 Columns -->
+		          <div class="col-xs-9">
+		            <!-- 1st Row -->
+		            <div class="row calc-row">
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-danger btn-calc" id="key-ac">AC</button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-danger btn-calc" id="key-ce">CE
+		                                    </button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-percent">%</button>
+		              </div>
+		            </div>
+		            <!-- 2nd Row -->
+		            <div class="row calc-row">
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-seven">7</button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-eight">8</button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-nine">9</button>
+		              </div>
+		            </div>
+		            <!-- 3rd Row -->
+		            <div class="row calc-row">
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-four">4</button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-five">5</button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-six">6</button>
+		              </div>
+		            </div>
+		            <!-- 4th Row -->
+		            <div class="row calc-row">
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-one">1</button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-two">2
+		                                    </button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-three">3</button>
+		              </div>
+		            </div>
+		            <!-- 5th Row -->
+		            <div class="row calc-row">
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-zero">0</button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-decimal">.</button>
+		              </div>
+		              <div class="col-xs-4">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-equate">=</button>
+		              </div>
+		            </div>
+		          </div>
+		          <!-- Right 1 Column -->
+		          <div class="col-xs-3">
+		            <!-- 1st Row -->
+		            <div class="row calc-row">
+		              <div class="col-xs-12">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-divide">/</button>
+		              </div>
+		            </div>
+		            <!-- 2nd Row -->
+		            <div class="row calc-row">
+		              <div class="col-xs-12">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-multiply">*</button>
+		              </div>
+		            </div>
+		            <!-- 3rd Row -->
+		            <div class="row calc-row">
+		              <div class="col-xs-12">
+		                <button type="button" class="btn btn-block btn-lg btn-default btn-calc" id="key-subtract">-</button>
+		              </div>
+		            </div>
+		            <!-- 4th & 5th row  -->
+		            <button type="button" class="btn btn-block btn-tall btn-default btn-calc" id="key-add">+</button>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+        <!-- history well -->
+        <div class="well history-container">
+            <h5>History</h5>
+            <div id="history"></div>
+          </div>
+        </div>
+        </div>
+        </div>
+		  </div>
+		</div>
+
+		<script src="/socket.io/socket.io.js"></script>
+
+  </body>
+  <script src="main.js"></script>
+</html>

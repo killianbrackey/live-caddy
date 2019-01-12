@@ -1,11 +1,21 @@
-  version: '2'
-  services:
+version: '2'
+services:
+
     killianbrackey.com:
       image: zzrot/alpine-caddy
       volumes:
         -   ./Caddyfile:/etc/Caddyfile
         -   ./killianbrackey.com/react/killianbrackey.com/build:/var/www/html
       networks:
-        -   frontend
-  networks:
+        - frontend
+    calc.killianbrackey.com:
+        image: zzrot/alpine-node
+        volumes:
+            -  ./calc.killianbrackey.com:/usr/src/app
+        working_dir: /usr/src/app
+        command: node index.js
+        networks:
+            - frontend
+
+networks:
       frontend:

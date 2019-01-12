@@ -1,10 +1,11 @@
 version: '2'
 services:
+
     killianbrackey.com:
         ports:
-          -   "80:80"
+            -   "80:80"
     developer:
-        build: ./compose/developer
+        image: zzrot/lazycat
         container_name: dev
         volumes:
             -   ./killianbrackey.com:/usr/src/app:rw
@@ -14,3 +15,7 @@ services:
             -   "3001:3001"
         networks:
             - frontend
+
+    calc.killianbrackey.com:
+        ports:
+            - "81:3000"
