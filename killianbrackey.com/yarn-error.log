@@ -1,0 +1,77 @@
+Arguments: 
+  /Users/KillianBrackey1/.nvm/versions/node/v8.15.0/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js start
+
+PATH: 
+  /anaconda3/bin:/usr/local/opt/curl/bin:/Users/KillianBrackey1/.nvm/versions/node/v8.15.0/bin:/Users/KillianBrackey1/.yarn/bin:/Users/KillianBrackey1/Downloads/google-cloud-sdk/bin:/usr/local/opt/go@1.7/bin:/Users/KillianBrackey1/.npm-packages/bin:/usr/local/sbin:/Users/KillianBrackey1/kubernetes/platforms/darwin/amd64:/Users/KillianBrackey1/kubernetes/platforms/darwin/amd64:/Users/KillianBrackey1/Downloads/google-cloud-sdk/bin:/Users/KillianBrackey1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/MacGPG2/bin:/Users/KillianBrackey1/golang/bin:/Users/KillianBrackey1/work/bin:/usr/local/opt/go/libexec/bin:/Users/KillianBrackey1/.composer/vendor/bin/
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.15.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "Docker-Develop",
+    "description": "Docker container for development",
+    "version": "1.0.0",
+    "homepage": "https://github.com/Skilgarriff/docker-develop",
+    "author": {
+      "name": "Sean Kilgarriff",
+      "email": "killianbrackey@gmail.com",
+      "url": "killianbrackey.com"
+    },
+    "license": "MIT",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Skilgarriff/docker-develop.git"
+    },
+    "bugs": {
+      "url": "https://github.com/Skilgarriff/docker-develop/issues"
+    },
+    "devDependencies": {
+      "browser-sync": "^2.11.0",
+      "gulp": "^3.9.0",
+      "gulp-autoprefixer": "^3.1.0",
+      "gulp-clean": "^0.3.1",
+      "gulp-concat": "^2.6.0",
+      "gulp-flatten": "^0.2.0",
+      "gulp-htmlmin": "^1.3.0",
+      "gulp-imagemin": "^2.4.0",
+      "gulp-minify-css": "^1.2.3",
+      "gulp-rename": "^1.2.2",
+      "gulp-sass": "^2.2.0",
+      "gulp-sitemap": "^3.1.0",
+      "gulp-uglify": "^1.5.2",
+      "gulp-util": "^3.0.7",
+      "imagemin-pngquant": "^4.2.0",
+      "node-bourbon": "^4.2.3",
+      "node-neat": "^1.7.2",
+      "require-dir": "^0.3.0"
+    },
+    "dependencies": {
+      "8": "0.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command "start" not found.
+      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:87307:17
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:116:14
+      at new Promise (<anonymous>)
+      at new F (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:23451:28)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:95:12
+      at runCommand (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:87312:22)
+      at Object.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:87412:14)
