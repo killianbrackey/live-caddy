@@ -1,5 +1,8 @@
 killianbrackey.com {
 
+  log / stdout "{combined}" {
+    rotate_age 15
+  }
 	proxy / killianbrackey.com:80 {
 
 	}
@@ -7,12 +10,6 @@ killianbrackey.com {
 	gzip
 
 	tls killianbrackey@gmail.com
-}
-
-www.killianbrackey.com {
-
-	redir https://killianbrackey.com
-
 }
 
 calc.killianbrackey.com {
